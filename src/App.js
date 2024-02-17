@@ -25,6 +25,7 @@ function TodoNew({addItem}) {
                 <div className="col-3">
                     <button
                         className="btn btn-primary form-control"
+                        disabled={! inputItem.length}
                         onClick={addHandler}
                     >
                         追加
