@@ -11,7 +11,8 @@
 body {
   /* background: linear-gradient(to bottom left, var(--yellowShade) 50%, var(--violetShade) 50%) no-repeat fixed; */
   /* background: linear-gradient(to top left, var(--yellowShade) 50%, var(--violetShade) 50%) no-repeat fixed; */
-  background-image: url('./background.png');
+  /* background-image: url('./background.png'); */
+  background-color: #ddd!important;
   color: white;
   /* font-size: 20px; */
   /* height: 100vh; */
