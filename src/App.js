@@ -11,13 +11,13 @@ function TodoNew({addItem}) {
     };
 
     return <div className="cardParent px-5">
-            <h1 className="text-center mb-5">Todoアプリ</h1>
+            <h1 className="text-center mb-5">Todo Lists</h1>
             <div className="input-group-prepend row">
                 <div className="col-9">
                     <input
                         type="search"
                         className="form-control"
-                        placeholder="何をするか？"
+                        placeholder="what will you do?"
                         value={inputItem}
                         onChange={(e) => setInputItem(e.target.value)}
                         required />
@@ -28,7 +28,7 @@ function TodoNew({addItem}) {
                         disabled={! inputItem.length}
                         onClick={addHandler}
                     >
-                        追加
+                        Add
                     </button>
                 </div>
             </div>
@@ -79,18 +79,18 @@ function TodoItem({item, onDelete, onUpdate}) {
         <span
             className={`badge badge-pill customBdg ${item.isDone === false ? "bg-danger" : "bg-success"}`}
         >
-            {`${item.isDone === false ? `保留中` : "完了しました"}`}
+            {`${item.isDone === false ? `reserve` : "completed"}`}
         </span>
         <button
             className="btn btn-danger buttonCustom"
             disabled={!item.isDone}
             onClick={deleteHandler}
         >
-            削除
+            Delete
         </button>
         <button
             className="btn btn-primary buttonCustom"
-            disabled={!item.isDone}
+            disabled={item.isDone}
             onClick={editHandler}
         >
             {editMode ? 'Update' : 'Edit'}
@@ -102,17 +102,17 @@ export default function App() {
     const [taskListArr, setTaskListArr] = useState([
         {
             id : 1,
-            value : 'テスト①',
+            value : 'Task 1',
             isDone : true
         },
         {
             id : 2,
-            value : 'テスト②',
+            value : 'Task 2',
             isDone : false
         },
         {
             id : 3,
-            value : 'テスト③',
+            value : 'Task 3',
             isDone : true
         },
     ]);
